@@ -1,6 +1,16 @@
+echo "========== BAIXANDO O PROJETO EM BRANCO ========="
 git clone git@github.com:IsTheJack/node_empty_babel_project.git
-echo "========== BAIXOU O PROJETO EM BRANCO ========="
 
+echo "========== RENOMEANDO O PROJETO ========="
 mv node_empty_babel_project $1
 
-echo "========== SEJA FELIZ!!! ========="
+echo "========== ACESSANDO O DIRETÓRIO DO PROJETO ========="
+cd $1
+
+echo "========== EXCLUINDO DIRETORIO .git ========="
+rm -R -f .git
+
+echo "========== BAIXANDO DEPENDENCIAS DO NPM ========="
+npm install
+
+notify-send --urgency=normal "Projeto em Babel Concluído" "O seu projeto $1 em Babel está concluído. Seja Feliz!"
