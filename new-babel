@@ -1,0 +1,6 @@
+git clone git@github.com:IsTheJack/node_empty_babel_project.git
+echo "========== BAIXOU O PROJETO EM BRANCO ========="
+
+mv node_empty_babel_project $1
+
+echo "========== SEJA FELIZ!!! ========="
